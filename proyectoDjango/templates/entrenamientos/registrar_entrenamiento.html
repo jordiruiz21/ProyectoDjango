@@ -1,0 +1,74 @@
+{% extends 'common/header2.html' %}
+{% block content %}
+<style>
+
+</style>
+<div class="container mt-5">
+  <h2 class="mb-4 pt-5">Registrar entrenamiento</h2>
+
+  <!-- Formulario para elegir el número de series -->
+  <form method="get" class="row g-3 align-items-end">
+    <div class="col-auto">
+      <label for="num_series" class="form-label">¿Cuántas series quieres añadir?</label>
+      <input type="number" class="form-control" name="num_series" id="num_series" min="1" value="{{ num_series }}">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-outline-primary">Actualizar</button>
+    </div>
+  </form>
+
+  <hr class="my-4">
+
+  <!-- Formulario de entrenamiento + series -->
+  <form method="post" class="mt-4">
+    {% csrf_token %}
+    <div class="mb-3">
+      {{ entrenamiento_form.as_p }}
+    </div>
+
+    <h4 class="mb-3">Series</h4>
+    {{ formset.management_form }}
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">Peso levantado (kg)</th>
+            <th scope="col">Repeticiones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for form in formset %}
+            <tr>
+              <td>{{ form.peso_levantado }}</td>
+              <td>{{ form.repeticiones }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar entrenamiento</button>
+  </form>
+
+  <hr class="my-5">
+
+  <h2>Historial de entrenamientos</h2>
+  {% for entrenamiento in historial %}
+    <div class="card mb-3">
+      <div class="card-header">
+        <strong>{{ entrenamiento.fecha }}</strong> - {{ entrenamiento.ejercicio.nombre }}
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          {% for serie in entrenamiento.series %}
+            <li class="list-group-item">{{ serie.peso_levantado }} kg × {{ serie.repeticiones }} reps</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% empty %}
+    <div class="alert alert-info">No tienes entrenamientos registrados aún.</div>
+  {% endfor %}
+</div>
+
+{% endblock %}

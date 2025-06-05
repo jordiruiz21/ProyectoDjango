@@ -1,0 +1,35 @@
+{% include "common/staff/staff_header.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Ejercicios</h2>
+    <a href="{% url 'staff_crear_ejercicio' %}" class="btn btn-success mb-3">Añadir nuevo ejercicio</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Músculo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ejercicio in ejercicios %}
+            <tr>
+                <td>{{ ejercicio.nombre }}</td>
+                <td>{{ ejercicio.musculo.nombre }}</td>
+                <td>
+                    <a href="{% url 'staff_editar_ejercicio' ejercicio.pk %}" class="btn btn-sm btn-primary">Editar</a>
+                    <a href="{% url 'staff_eliminar_ejercicio' ejercicio.pk %}" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">No hay ejercicios registrados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

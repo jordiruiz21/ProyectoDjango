@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitCore Gym</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+ 
+  
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'img/FitCore_blanco.png' %}" alt="FitCore Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="{% url 'landing' %}">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'pagina_cuerpo' %}">Ejercicios</a></li>
+          {% if request.user.is_authenticated and request.user.is_staff %}
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'panel_administracion' %}">Panel Administración</a>
+              </li>
+            {% endif %}
+          {% if request.user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'registrar_entrenamiento' %}">Registrar Entrenamiento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'estadisticas' %}">Estadísticas</a>
+            </li>
+          {% endif %}
+              <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>
+        </ul>
+      {% if request.user.is_authenticated %}
+        <form method="post" action="{% url 'account_logout' %}" class="d-inline">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-cta ms-3">Cerrar sesión</button>
+        </form>
+      {% else %}
+        <a href="{% url 'account_login' %}" class="btn btn-cta ms-3">Iniciar sesión</a>
+      {% endif %}
+      </div>
+    </div>
+  </nav>
+</header>
+{% block content %}
+    {% endblock %} 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

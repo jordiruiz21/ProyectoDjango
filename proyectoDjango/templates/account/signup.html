@@ -1,0 +1,27 @@
+{% load static %}
+{% include 'common/header.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    
+</head>
+<body class="register-page">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-5 ms-auto">
+
+        <div class="register-container">
+            <h2>Crear Cuenta</h2>
+
+            <form method="post" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <button type="submit" class="btn btn-register">Registrarse</button>
+            </form>
+
+            <p class="login-text">¿Ya tienes una cuenta? <a href="{% url 'account_login' %}">Inicia sesión</a></p>
+        </div>
+    </div>
+</body>
+</html>

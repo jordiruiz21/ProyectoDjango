@@ -1,0 +1,39 @@
+<!-- templates/common/staff/panel_administracion.html -->
+{% include "common/staff/staff_header.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Panel de Administración</h2>
+
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm borde-rojo">
+                <div class="card-body">
+                    <h5 class="card-title">Centros</h5>
+                    <p class="card-text">Gestiona los centros disponibles.</p>
+                    <a href="{% url 'staff_lista_centros' %}" class="btn btn-outline-primary btn-sm">Ver Centros</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm borde-rojo">
+                <div class="card-body">
+                    <h5 class="card-title">Músculos</h5>
+                    <p class="card-text">Edita los músculos disponibles en el sistema.</p>
+                    <a href="{% url 'staff_lista_musculos' %}" class="btn btn-outline-primary btn-sm">Ver Músculos</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm borde-rojo">
+                <div class="card-body">
+                    <h5 class="card-title">Ejercicios</h5>
+                    <p class="card-text">Administra los ejercicios registrados.</p>
+                    <a href="{% url 'staff_lista_ejercicios' %}" class="btn btn-outline-primary btn-sm">Ver Ejercicios</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% load static %}
+{% include 'common/header2.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ centro.nombre }}</title>
+    <style>
+
+        .img-fluid {
+            border-radius: 10px;
+        }
+        .card {
+            border: none;
+        }
+
+        iframe {
+            border-radius: 10px;
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Imagen y detalle del centro -->
+    <div class="row mb-5">
+        <div class="col-md-6">
+            {% if centro.imagen %}
+                <img src="{{ centro.imagen.url }}" alt="{{ centro.nombre }}" class="img-fluid">
+            {% else %}
+                <img src="{% static 'default.jpg' %}" alt="Centro sin imagen" class="img-fluid">
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            <h2>{{ centro.nombre }}</h2>
+            <p><strong>Teléfono:</strong> {{ centro.telefono }}</p>
+            <p><strong>Dirección:</strong> {{ centro.direccion }}</p>
+            <p><strong>Horario general:</strong> {{ centro.horario }}</p>
+
+            <a href="tel:{{ centro.telefono }}" class="btn btn-primary">Contactar</a>
+        </div>
+    </div>
+
+    <!-- Sección horarios y mapa -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h4>Tarifas</h4>
+            <ul class="list-group">
+                <li class="list-group-item">Matrícula: 20€</li>
+                <li class="list-group-item">Plan Básico: 45€/mes</li>
+                <li class="list-group-item">Plan Estándar: 50€</li>
+                <li class="list-group-item">Plan Premium: 60€</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <h4>Ubicación</h4>
+            <!-- Reemplaza por la dirección exacta -->
+            <iframe
+                src="https://www.google.com/maps?q={{ centro.direccion|urlencode }}&output=embed"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

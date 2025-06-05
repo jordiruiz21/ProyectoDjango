@@ -1,0 +1,15 @@
+{% include "common/staff/staff_header.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Editar ejercicio: {{ ejercicio.nombre }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <a href="{% url 'staff_lista_ejercicios' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.app-env
+db.sqlite3
+/staticfiles/
+/media/
+postgres_data/
