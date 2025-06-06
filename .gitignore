@@ -2,7 +2,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.app-env
+app-env/
 db.sqlite3
 /staticfiles/
 /media/
