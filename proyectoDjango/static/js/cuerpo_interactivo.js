@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('svgCuerpoContainer');
 
-    fetch("/static/models/cuerpo_humano2.svg")
+    fetch("/static/models/cuerpo_humano4.svg")
         .then(res => res.text())
         .then(svgText => {
             container.innerHTML = svgText;
