@@ -1,21 +1,23 @@
-# Usa una imagen base de Python
 FROM python:3.10
 
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copia los archivos del proyecto al contenedor
-COPY . /app
+# Copia todo el contenido del proyecto
+COPY . .
 
-# Instala las dependencias
+# Entra a la carpeta donde están manage.py y settings.py
+WORKDIR /app/proyectoDjango
+
+# Instala dependencias
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -r ../requirements.txt
 
-# Añade el directorio actual al PYTHONPATH
-ENV PYTHONPATH="/app"
+# Recolecta archivos estáticos (opcional pero recomendado)
+RUN python manage.py collectstatic --noinput
 
-# Expone el puerto 8000
+# Expone el puerto para Render
 EXPOSE 8000
 
-# Comando para arrancar Gunicorn
-CMD ["gunicorn", "proyectoDjango.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Lanza Gunicorn apuntando al módulo correcto
+CMD gunicorn proyectoDjango.wsgi:application --bind 0.0.0.0:$PORT
