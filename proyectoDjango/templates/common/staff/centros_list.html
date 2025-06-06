@@ -2,11 +2,11 @@
 
 {% load static %}
 
-{% block title %}Gestión de Centros{% endblock %}
 
 {% block content %}
 <div class="container mt-5">
   <h2 class="mb-4">Gestión de Centros</h2>
+    <a href="{% url 'staff_crear_ejercicio' %}" class="btn btn-success mb-3">Añadir nuevo ejercicio</a>
 
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     {% for centro in centros %}
