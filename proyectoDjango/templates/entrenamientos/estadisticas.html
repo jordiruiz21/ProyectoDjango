@@ -8,6 +8,31 @@
         border: 1px solid #f00a0a;
         border-radius: 10px;
     }
+    .grafico-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.grafico-container::before {
+    content: "";
+    display: block;
+    padding-top: 60%; /* mantiene la relación de aspecto 5:3 */
+}
+
+#grafico-container canvas,
+.grafico-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #1e1e1e; /* fondo oscuro para que las líneas blancas se vean */
+    border-radius: 12px;
+}
+
 </style>
 <section class="estadisticas-container">
     <h2>Estadísticas de Entrenamiento</h2>
@@ -23,7 +48,10 @@
         <button id="btnTotal" class="switch-btn">Peso Total</button>
     </div>
 
-    <canvas id="pesoChart" style="width: 100%; height: auto; max-height: 400px;" class="graficos" ></canvas>
+    <div class="grafico-container">
+        <canvas id="pesoChart"></canvas>
+    </div>
+
 
 </section>
 <section class="container my-5">
