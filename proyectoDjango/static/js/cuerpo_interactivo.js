@@ -9,8 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const videosPorMusculo = {
                 biceps: ['https://www.youtube.com/embed/ykJmrZ5v0Oo', 'https://www.youtube.com/embed/6zIuAyLZPH0', 'https://www.youtube.com/embed/1Tq3QdYUuHs'],
-                triceps: ['https://www.youtube.com/embed/6SSWbAfJ9ME', 'https://www.youtube.com/embed/2-LAMcpzODU'],
-                pecho: ['https://www.youtube.com/embed/eozdVDA78K0', 'https://www.youtube.com/embed/SQHf9gqV5E4'],
+                triceps: ['https://www.youtube.com/watch?v=PTO862T8U7Y&ab_channel=EntrenamientoDiferencial', 'https://www.youtube.com/embed/2-LAMcpzODU'],
+                pecho: ['https://www.youtube.com/embed/eozdVDA78K0', 'https://www.youtube.com/watch?v=Lp9LLEGJJrI&ab_channel=ATHLEAN-XEspa%C3%B1ol', 'https://www.youtube.com/watch?v=VB09kLgJDo0&ab_channel=GymTopz'],
                 cuadriceps: ['https://www.youtube.com/embed/s6zR2T9vn2c', 'https://www.youtube.com/embed/tEoSTa1b90E'],
                 hombro: ['https://www.youtube.com/embed/2yjwXTZQDDI', 'https://www.youtube.com/embed/0JfYxMRsUCQ'],
                 gemelo: ['https://www.youtube.com/embed/-M4-G8p8fmc', 'https://www.youtube.com/embed/IUZJoSP66HI'],

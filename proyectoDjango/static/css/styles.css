@@ -318,6 +318,69 @@
             max-width: 700px;
             height: auto;
         }
+/* Registrar Entrenamientos */
+.titulo-entrenamiento,
+.titulo-historial {
+  color: #333;
+  font-weight: 600;
+}
+
+.subtitulo-series {
+  font-weight: 500;
+  color: #444;
+}
+
+.btn-cta {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-cta:hover {
+  background-color: #0056b3;
+}
+
+.btn-guardar {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.card-entrenamiento {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.cabecera-entrenamiento {
+  background-color: #f8f9fa;
+  font-weight: 500;
+}
+
+.item-serie {
+  font-size: 0.95rem;
+}
+
+.tabla-series th,
+.tabla-series td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+@media (max-width: 576px) {
+  .tabla-series th,
+  .tabla-series td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .titulo-entrenamiento,
+  .titulo-historial {
+    font-size: 1.3rem;
+  }
+
+  .btn-guardar {
+    font-size: 0.95rem;
+  }
+}
 
 /* Estadísticas */
 .estadisticas-container {
