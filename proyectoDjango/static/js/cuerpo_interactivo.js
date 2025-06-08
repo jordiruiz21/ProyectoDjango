@@ -8,19 +8,58 @@ window.addEventListener('DOMContentLoaded', () => {
             const svgDoc = container.querySelector('svg');
 
             const videosPorMusculo = {
-                biceps: ['https://www.youtube.com/embed/ykJmrZ5v0Oo', 'https://www.youtube.com/embed/6zIuAyLZPH0', 'https://www.youtube.com/embed/1Tq3QdYUuHs'],
-                triceps: ['https://www.youtube.com/watch?v=PTO862T8U7Y&ab_channel=EntrenamientoDiferencial', 'https://www.youtube.com/embed/2-LAMcpzODU'],
-                pecho: ['https://www.youtube.com/embed/eozdVDA78K0', 'https://www.youtube.com/watch?v=Lp9LLEGJJrI&ab_channel=ATHLEAN-XEspa%C3%B1ol', 'https://www.youtube.com/watch?v=VB09kLgJDo0&ab_channel=GymTopz'],
-                cuadriceps: ['https://www.youtube.com/embed/s6zR2T9vn2c', 'https://www.youtube.com/embed/tEoSTa1b90E'],
-                hombro: ['https://www.youtube.com/embed/2yjwXTZQDDI', 'https://www.youtube.com/embed/0JfYxMRsUCQ'],
-                gemelo: ['https://www.youtube.com/embed/-M4-G8p8fmc', 'https://www.youtube.com/embed/IUZJoSP66HI'],
-                abdomen: ['https://www.youtube.com/embed/1919eTCoESo', 'https://www.youtube.com/embed/AnYl6Nk9GOA'],
-                dorsal: ['https://www.youtube.com/embed/2LiDCgXf5aA', 'https://www.youtube.com/embed/pmyNz2xPU4Y'],
-                gluteos: ['https://www.youtube.com/embed/2-D4V2On_eQ', 'https://www.youtube.com/embed/Rr6eGfWFE5k'],
-                trapecios: ['https://www.youtube.com/embed/XKt1yptMMGc'],
-                femoral: ['https://www.youtube.com/embed/5i5AqBjM1BU'],
-                aductor: ['https://www.youtube.com/embed/IhA8kZjLt0s']
+                biceps: [
+                    'https://www.youtube.com/embed/ykJmrZ5v0Oo',
+                    'https://www.youtube.com/embed/6zIuAyLZPH0',
+                    'https://www.youtube.com/embed/1Tq3QdYUuHs'
+                ],
+                triceps: [
+                    'https://www.youtube.com/embed/PTO862T8U7Y',
+                    'https://www.youtube.com/embed/2-LAMcpzODU'
+                ],
+                pecho: [
+                    'https://www.youtube.com/embed/eozdVDA78K0',
+                    'https://www.youtube.com/embed/Lp9LLEGJJrI',
+                    'https://www.youtube.com/embed/VB09kLgJDo0'
+                ],
+                cuadriceps: [
+                    'https://www.youtube.com/embed/dsCuiccYNGs',
+                    'https://www.youtube.com/embed/bnJ5WXSnW98',
+                    'https://www.youtube.com/embed/tEoSTa1b90E'
+                ],
+                hombro: [
+                    'https://www.youtube.com/embed/o5M9RZ-vWrc',
+                    'https://www.youtube.com/embed/TP6P8-gojO8',
+                    'https://www.youtube.com/embed/45YT0b-hzuw'
+                ],
+                gemelo: [
+                    'https://www.youtube.com/embed/-M4-G8p8fmc',
+                    'https://www.youtube.com/embed/vnriTeUAIBU'
+                ],
+                abdomen: [
+                    'https://www.youtube.com/embed/lhbrR9GFNSY',
+                    'https://www.youtube.com/embed/Pvxj-1dgVk0'
+                ],
+                dorsal: [
+                    'https://www.youtube.com/embed/QaAIz3wloGo',
+                    'https://www.youtube.com/embed/ue8MXKXdOVw',
+                    'https://www.youtube.com/embed/AAYBnWuTZiM'
+                ],
+                gluteos: [
+                    'https://www.youtube.com/embed/7eWQgs2xOGE',
+                    'https://www.youtube.com/embed/5S8SApGU_Lk'
+                ],
+                trapecios: [
+                    'https://www.youtube.com/embed/yvzYxVqMCH4'
+                ],
+                femoral: [
+                    'https://www.youtube.com/embed/ycRFr3aPKjY'
+                ],
+                aductor: [
+                    'https://www.youtube.com/embed/fItDiXXZyZo'
+                ]
             };
+
 
             const alias = {
                 'biceps-2': 'biceps', 'triceps-2': 'triceps', 'cuadriceps-2': 'cuadriceps',

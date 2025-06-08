@@ -330,15 +330,6 @@
   color: #444;
 }
 
-.btn-cta {
-  background-color: #007bff;
-  color: white;
-  border: none;
-}
-
-.btn-cta:hover {
-  background-color: #0056b3;
-}
 
 .btn-guardar {
   font-weight: bold;
