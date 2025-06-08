@@ -1,6 +1,13 @@
 {% extends 'common/header2.html' %}
 {% block content %}
-
+<style>
+  input
+   {
+        border: 1px solid black ;
+        border-radius: 4px ;
+        box-shadow: none ;
+    }
+</style>
 <div class="container mt-5">
   <h2 class="mb-4 pt-5 text-center titulo-entrenamiento">Registrar entrenamiento</h2>
 
@@ -11,7 +18,7 @@
       <input type="number" class="form-control" name="num_series" id="num_series" min="1" value="{{ num_series }}">
     </div>
     <div class="col-12 col-md-auto">
-      <button type="submit" class="btn btn-cta mt-2 mt-md-0">Actualizar</button>
+      <button type="submit" class="btn btn-primary mt-2 mt-md-0">Actualizar</button>
     </div>
   </form>
 

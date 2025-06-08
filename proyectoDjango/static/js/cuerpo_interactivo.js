@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 ],
                 cuadriceps: [
                     'https://www.youtube.com/embed/dsCuiccYNGs',
-                    'https://www.youtube.com/embed/bnJ5WXSnW98',
-                    'https://www.youtube.com/embed/tEoSTa1b90E'
+                    'https://www.youtube.com/embed/bnJ5WXSnW98'
+                    
                 ],
                 hombro: [
                     'https://www.youtube.com/embed/o5M9RZ-vWrc',
