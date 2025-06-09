@@ -21,11 +21,13 @@
 .nav-link:hover {
   color: #f00a0a;
 }
-.navbar-collapse.show {
-  background-color: rgba(0, 0, 0, 0.9); /* Negro con algo de transparencia */
-  padding: 1rem;
-  border-radius: 0.5rem;
+/* Aplica siempre en móviles (donde colapsa) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9); /* fondo oscuro translúcido */
+  }
 }
+
 
 .btn-cta { 
   border-color: #f00a0a;
