@@ -63,6 +63,7 @@ const datos = JSON.parse(document.getElementById('datos-entrenamiento').textCont
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: false,
                 plugins: {
                     title: {
                         display: true,

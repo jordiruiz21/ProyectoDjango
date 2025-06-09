@@ -24,7 +24,9 @@
 /* Aplica siempre en móviles (donde colapsa) */
 @media (max-width: 991.98px) {
   .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.9); /* fondo oscuro translúcido */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
   }
 }
 
@@ -379,7 +381,28 @@
     font-size: 0.95rem;
   }
 }
+#id_ejercicio {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #f00a0a;
+    color: #f00a0a;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.2s ease;
+    appearance: none; /* Elimina estilos por defecto del navegador */
+    cursor: pointer;
+}
 
+#id_ejercicio:hover {
+    color: #f00a0a;
+
+}
+
+#id_ejercicio:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 17, 0, 0.3);
+}
 /* Estadísticas */
 .estadisticas-container {
     display: flex;
@@ -401,6 +424,18 @@
 .switch-btn.active {
     background-color: #f00a0a;
     color: white;
+}
+.grafico-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Opcional: evita que sea enorme en desktop */
+  margin: 0 auto;
+}
+
+#grafico-container canvas, 
+#miGrafico {
+  width: 100% !important;
+  height: auto !important;
 }
 
 .graficos{
