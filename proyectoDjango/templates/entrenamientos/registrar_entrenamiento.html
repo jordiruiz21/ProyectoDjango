@@ -1,7 +1,7 @@
 {% extends 'common/header2.html' %}
 {% block content %}
 <style>
-  input
+  .input-entrenos
    {
         border: 1px solid black ;
         border-radius: 4px ;
@@ -15,7 +15,7 @@
   <form method="get" class="row g-3 align-items-end justify-content-center form-series">
     <div class="col-12 col-md-4">
       <label for="num_series" class="form-label">¿Cuántas series quieres añadir?</label>
-      <input type="number" class="form-control" name="num_series" id="num_series" min="1" value="{{ num_series }}">
+      <input type="number" class="form-control input-entrenos" name="num_series" id="num_series" min="1" value="{{ num_series }}">
     </div>
     <div class="col-12 col-md-auto">
       <button type="submit" class="btn btn-primary mt-2 mt-md-0">Actualizar</button>

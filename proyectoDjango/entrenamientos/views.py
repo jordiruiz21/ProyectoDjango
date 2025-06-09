@@ -7,7 +7,8 @@ import json
 from collections import defaultdict
 from statistics import mean
 from django.contrib.admin.views.decorators import staff_member_required
-
+from django.shortcuts import render
+from .models import Entrenamiento
 
 
 
@@ -36,7 +37,7 @@ def registrar_entrenamiento(request):
         entrenamiento_form = EntrenamientoForm()
         formset = SerieFormSetCustom(queryset=Serie.objects.none())
 
-    historial = Entrenamiento.objects.filter(usuario=request.user).order_by('-fecha')
+    historial = Entrenamiento.objects.filter(usuario=request.user).order_by('-fecha')[:10]
 
     return render(request, 'entrenamientos/registrar_entrenamiento.html', {
         'entrenamiento_form': entrenamiento_form,
@@ -45,13 +46,7 @@ def registrar_entrenamiento(request):
         'num_series': num_series
     })
 
-from collections import defaultdict
-from statistics import mean
 
-from collections import defaultdict
-from statistics import mean
-from django.shortcuts import render
-from .models import Entrenamiento
 
 def estadisticas(request):
     entrenamientos = Entrenamiento.objects.filter(

@@ -10,8 +10,8 @@ window.addEventListener('DOMContentLoaded', () => {
             const videosPorMusculo = {
                 biceps: [
                     'https://www.youtube.com/embed/ykJmrZ5v0Oo',
-                    'https://www.youtube.com/embed/6zIuAyLZPH0',
-                    'https://www.youtube.com/embed/1Tq3QdYUuHs'
+                    'https://www.youtube.com/embed/20ibpB635Rw'
+                    
                 ],
                 triceps: [
                     'https://www.youtube.com/embed/PTO862T8U7Y',
@@ -53,7 +53,8 @@ window.addEventListener('DOMContentLoaded', () => {
                     'https://www.youtube.com/embed/yvzYxVqMCH4'
                 ],
                 femoral: [
-                    'https://www.youtube.com/embed/ycRFr3aPKjY'
+                    'https://www.youtube.com/embed/ycRFr3aPKjY',
+                    'https://www.youtube.com/embed/1Tq3QdYUuHs'
                 ],
                 aductor: [
                     'https://www.youtube.com/embed/fItDiXXZyZo'

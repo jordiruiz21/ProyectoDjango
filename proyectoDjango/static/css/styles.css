@@ -21,6 +21,12 @@
 .nav-link:hover {
   color: #f00a0a;
 }
+.navbar-collapse.show {
+  background-color: rgba(0, 0, 0, 0.9); /* Negro con algo de transparencia */
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
 .btn-cta { 
   border-color: #f00a0a;
   color: #fff;
