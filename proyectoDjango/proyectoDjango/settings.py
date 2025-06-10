@@ -28,7 +28,17 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'adfñakjdñakd')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['fitcore.onrender.com','localhost', '127.0.0.1']
+if DEBUG:
+    # En desarrollo, sé más permisivo (o usa '*' con precaución)
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+else:
+    # En producción, usa la variable de entorno de Render o el nombre de host de tu app
+    RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+    if RENDER_EXTERNAL_HOSTNAME:
+        ALLOWED_HOSTS = [RENDER_EXTERNAL_HOSTNAME]
+    else:
+        # Fallback si RENDER_EXTERNAL_HOSTNAME no está disponible (menos común en Render)
+        ALLOWED_HOSTS = ['fitcore.onrender.com']
 
 
 
