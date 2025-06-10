@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'adfñakjdñakd')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['fitcore.onrender.com']
+ALLOWED_HOSTS = ['fitcore.onrender.com','localhost', '127.0.0.1']
 
 
 
