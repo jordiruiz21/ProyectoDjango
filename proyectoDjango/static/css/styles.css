@@ -24,7 +24,7 @@
 /* Aplica siempre en móviles (donde colapsa) */
 @media (max-width: 991.98px) {
   .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 1rem;
     border-radius: 0 0 10px 10px;
   }
@@ -436,6 +436,16 @@
 #miGrafico {
   width: 100% !important;
   height: auto !important;
+}
+#grafico-container, #miGrafico {
+  min-height: 200px;
+}
+
+/* En móvil: aumentar un poco */
+@media (max-width: 768px) {
+  #miGrafico {
+    min-height: 250px;
+  }
 }
 
 .graficos{
