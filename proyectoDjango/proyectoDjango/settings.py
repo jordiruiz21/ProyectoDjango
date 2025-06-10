@@ -30,7 +30,7 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 if DEBUG:
     # En desarrollo, sé más permisivo (o usa '*' con precaución)
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+    ALLOWED_HOSTS = ['fitcore.onrender.com','localhost', '127.0.0.1']
 else:
     # En producción, usa la variable de entorno de Render o el nombre de host de tu app
     RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
