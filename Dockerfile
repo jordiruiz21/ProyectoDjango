@@ -20,6 +20,5 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Lanza Gunicorn apuntando al módulo correcto
-CMD ["sh", "-c", "python manage.py migrate && python manage.py collectstatic --noinput && python create_superuser.py && gunicorn proyectoDjango.wsgi:application --bind 0.0.0.0:$PORT"]
-
+CMD ["sh", "-c", "python manage.py migrate && python manage.py collectstatic --noinput && python create_superuser.py && gunicorn proyectoDjango.wsgi:application --bind 0.0.0.0:10000"]
 
