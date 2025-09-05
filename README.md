@@ -2,7 +2,6 @@ FitCore 🏋️
 Plataforma web desarrollada en Django para la gestión de un gimnasio, con registro de usuarios, rutinas de entrenamiento y seguimiento de progreso.
 
 ![Django](https://img.shields.io/badge/Django-4.x-green)
-![React](https://img.shields.io/badge/Frontend-React-blue)
 ![Docker](https://img.shields.io/badge/Dev-Docker-lightblue)
 ![Database](https://img.shields.io/badge/DB-PostgreSQL-darkblue)
 
